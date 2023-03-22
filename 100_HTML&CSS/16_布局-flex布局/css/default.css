@@ -1,0 +1,27 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.d-container {
+  width: 120px;
+  height: 120px;
+  background-color: #eee;
+  margin: 10px;
+}
+
+/* justify-content */
+.d-container {
+  /* width: 250px; */
+  /* height: 180px; */
+}
+
+.d-item {
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+}
