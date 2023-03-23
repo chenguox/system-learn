@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1. 指定第几个 */
+      /* ul li:nth-child(3) {
+        color: red;
+      } */
+
+      /* 2. 偶数和奇数 */
+      /* ul li:nth-child(2n) {
+        color: #f00;
+      }
+
+      ul li:nth-child(2n + 1) {
+        color: #0f0;
+      } */
+
+      /* 3. 四个一组，每组第二个 */
+      /* ul li:nth-child(4n + 2) {
+        background-color: darkkhaki;
+      } */
+
+      /* 4. 前5个 */
+      ul li:nth-child(-n + 5) {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>列表元素1</li>
+      <li>列表元素2</li>
+      <li>列表元素3</li>
+      <li>列表元素4</li>
+      <li>列表元素5</li>
+      <li>列表元素6</li>
+      <li>列表元素7</li>
+      <li>列表元素8</li>
+      <li>列表元素9</li>
+    </ul>
+  </body>
+</html>

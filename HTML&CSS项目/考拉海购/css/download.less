@@ -1,0 +1,48 @@
+@import url(./variable.less);
+
+.download {
+  display: flex;
+  height: 59px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+
+  .left {
+    flex: 1;
+    display: flex;
+    padding: 2.6667vw;
+    box-sizing: border-box;
+
+    .logo {
+      vertical-align: center;
+
+      img {
+        width: 10.6667vw;
+        height: 10.6667vw;
+        border: 1px solid #eee;
+        border-radius: 4vw;
+      }
+    }
+
+    .info {
+      font-size: @normalFontSize;
+      padding-left: 2.6667vw;
+      box-sizing: border-box;
+
+      .subtitle {
+        color: #999;
+        font-size: @smallFontSize;
+      }
+    }
+  }
+
+  .right {
+    width: 94px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+
+    background-image: linear-gradient(to right, #ff0409, #ff3162);
+  }
+}

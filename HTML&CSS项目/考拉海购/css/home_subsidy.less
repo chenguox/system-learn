@@ -1,0 +1,114 @@
+@import url(./variable.less);
+
+.subsidy {
+  box-sizing: border-box;
+  margin: 2.6667vw;
+  padding: 0 2.6667vw 2.6667vw;
+  background-color: #fff;
+  border-radius: 2.6667vw;
+
+  .top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10.6667vw;
+
+    .remain-time {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      color: @mainColor;
+
+      img {
+        width: 16.8vw;
+        height: 4.2667vw;
+      }
+
+      .over-time {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: @smallFontSize;
+      }
+
+      .hours,
+      .second,
+      .minute {
+        display: inline-block;
+        width: 4.8vw;
+        height: 4.2667vw;
+        background-color: @mainColor;
+        color: #fff;
+        margin: 0 1.3333vw;
+        border-radius: 0.8vw;
+      }
+    }
+
+    .nav-subsidy {
+      position: relative;
+      font-size: @smallFontSize;
+      color: @mainColor;
+      margin-right: 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 1.6vw;
+        height: 1.6vw;
+
+        border: 1px solid transparent;
+        border-top-color: @mainColor;
+        border-right-color: @mainColor;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .sub-production {
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .pic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        width: 78px;
+        height: 78px;
+      }
+
+      .price-wrapper {
+        color: @mainColor;
+        font-size: @smallFontSize;
+
+        span:nth-child(2) {
+          font-weight: bold;
+          font-size: @normalFontSize;
+
+          &::before {
+            content: "￥";
+            font-size: @smallFontSize;
+          }
+        }
+
+        .const-price {
+          text-align: center;
+          color: #999;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}

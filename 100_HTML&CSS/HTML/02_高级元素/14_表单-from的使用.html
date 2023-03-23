@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="http://hongyuancoder.com/abc" method="post" target="_blank">
+      <!-- 账号密码 -->
+      <div>
+        <label for="username">
+          用户； <input type="text" id="username" name="username" />
+        </label>
+      </div>
+      <div>
+        <label for="password">
+          密码： <input type="password" id="password" name="password" />
+        </label>
+      </div>
+
+      <!-- 性别 -->
+      <div>
+        <label for="male">
+          <input id="male" type="radio" name="sex" value="male" />男
+        </label>
+        <label for="female">
+          <input id="female" type="radio" name="sex" value="female" />女
+        </label>
+      </div>
+
+      <!-- 爱好 -->
+      <div>
+        爱好:
+        <label for="basketball">
+          <input
+            id="basketball"
+            type="checkbox"
+            name="hobby"
+            checked
+            value="basketball"
+          /> </label
+        >篮球
+        <label for="football">
+          <input
+            id="football"
+            type="checkbox"
+            name="hobby"
+            value="football"
+          /> </label
+        >足球
+      </div>
+
+      <!-- 提交按钮 -->
+      <button type="reset">重置内容</button>
+      <button type="submit">提交内容</button>
+    </form>
+  </body>
+</html>
