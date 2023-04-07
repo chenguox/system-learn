@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="myList">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <p id="demo">单击按钮替换列表中的第一项。</p>
+    <button onclick="myFunction()">点我</button>
+    <script>
+      function myFunction() {
+        // 1. 创建一个 li 元素
+        var liEl = document.createElement("li");
+        var textNode = document.createTextNode("Water");
+        liEl.appendChild(textNode);
+
+        // 2. 方式一： 替换列表的 li
+        var ulEl = document.getElementById("myList");
+        // ulEl.replaceChild(liEl, ulEl.childNodes[1]);
+
+        // 方式二：替换列表 li 的文本节点
+        // 拿到第一个li
+        var item = ulEl.childNodes[1];
+        console.log(item);
+        item.replaceChild(textNode, item.childNodes[0]);
+      }
+    </script>
+  </body>
+</html>

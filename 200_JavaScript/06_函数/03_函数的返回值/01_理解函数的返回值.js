@@ -16,4 +16,4 @@ function sum(num1, num2) {
 }
 
 var total = sum(20, 30)
-console.log("total: ", total)
+console.log("total: ", total) // total:  50   

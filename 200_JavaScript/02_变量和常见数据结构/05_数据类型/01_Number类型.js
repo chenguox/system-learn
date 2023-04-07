@@ -5,7 +5,7 @@ var height = 1.88
 // 2. 特殊的数值
 var num1 = Infinity
 var num2 = 1 / 0
-console.log(num1, num2)
+console.log(num1, num2) // Infinity Infinity
 
 // 3. NaN: not a number (不是一个数字)
 var result = 3 * "abc"
@@ -22,4 +22,4 @@ console.log(num4, num5, num6)  // 4  64  256
 // 5. 数字可以表示的范围
 var max = Number.MAX_VALUE
 var min = Number.MIN_VALUE
-console.log(max, min)
+console.log(max, min) // 1.7976931348623157e+308 5e-324

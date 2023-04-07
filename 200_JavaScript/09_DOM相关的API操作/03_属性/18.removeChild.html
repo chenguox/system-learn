@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="myList">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <p id="demo">单击按钮移除列表的第一项</p>
+    <button onclick="myFunction()">点我</button>
+    <script>
+      function myFunction() {
+        var ulEl = document.getElementById("myList");
+        ulEl.removeChild(ulEl.childNodes[1]);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>表单验证案例</title>
+  <style>
+    table {
+      width: 700px;
+      height: 350px;
+      margin-top: 90px;
+      background-color: aquamarine;
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 1px solid #000;
+      /* padding: 5px 10px; */
+    }
+
+    .title {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="#" method="get" onsubmit="return test()">
+    <table align="center">
+      <tr>
+        <td class="title" colspan="2">用户注册页面</td>
+      </tr>
+      <tr>
+        <td class="username">用户名：</td>
+        <td>
+          <input type="text" id="username" placeholder="请输入用户名6-16为字母" oninput="checkUsername()">
+          <span id="username-tip"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="password">密码：</td>
+        <td><input type="password" id="password" placeholder="请输入8位密码" oninput="checkPassword()">
+          <span id="password-tip"></span>
+        </td>
+      </tr>
+      <tr>
+        <td class="re-password">确认密码：</td>
+        <td><input type="text" id="re-password" placeholder="请输入确认密码8位密码" oninput="checkDbPassword()">
+          <span id="password-tip2"></span>
+        </td>
+        </td>
+      </tr>
+      <tr>
+        <td class="register">性别：</td>
+        <td>
+          <div onmouseleave="checkGender()">
+            <label for="male">
+              <input type="radio" id="male" name="gender">男</label>
+            <label for="remale">
+              <input type="radio" id="remale" name="gender">
+              女</label>
+              <span id="gender-tip"></span></div>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="register" >爱好：</td>
+        <td>
+          <div onmouseleave="checkHobby()">
+            <label for="runing">
+              <input type="checkbox" id="runing" name="hobby" checked value="runing">
+              跑步
+            </label>
+            <label for="no">
+              <input type="checkbox" id="no" name="hobby" value="no">
+              没什么爱好
+            </label>
+            <label for="more">
+              <input type="checkbox" id="more" name="hobby" value="more" >
+              有很多爱好
+            </label>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="register">个人描述</td>
+        <td>
+          <textarea name="" id="" cols="30" rows="10" placeholder="请填写个人描述" oninput="checkMiaoshu()"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td class="register" colspan="2">
+          <input type="reset">
+        </td>
+      </tr>
+  </form>
+
+  <script>
+    function checkUsername() {
+      let username = document.querySelector('#username').value
+      let regx = /^[a-zA-Z]{6,16}$/
+      let checkResult = regx.test(username)
+      let spanEl = document.querySelector('#username-tip')
+      if (checkResult) {
+        spanEl.innerHTML = "<font color='green'>用户名规则正确√</font>"
+      } else {
+        spanEl.innerHTML = "<font color='red'>用户名格式错误</font>"
+      }
+      return checkResult
+    }
+
+    function checkPassword() {
+      let password = document.querySelector('#password').value
+      let regx = /^[a-zA-Z0-9]{8,16}$/
+      let checkResult = regx.test(password)
+      let spanEl = document.querySelector('#password-tip')
+      if (checkResult) {
+        spanEl.innerHTML = "<font color='green'>密码格式正确√</font>"
+      } else {
+        spanEl.innerHTML = "<font color='red'>密码格式错误</font>"
+      }
+      return checkResult
+    }
+
+    function checkDbPassword() {
+      let password1 = document.querySelector('#password').value
+      let password2 = document.querySelector('#re-password').value
+      let spanEl = document.querySelector('#password-tip2')
+      if (password1 === password2) {
+        spanEl.innerHTML = "<font color='green'>两次密码输入一致✔</font>"
+      } else {
+        spanEl.innerHTML = "<font color='red'>两次密码输入不一致</font>"
+      }
+      return password1 === password2
+    }
+  
+    function checkGender() {
+      let spanEl = document.querySelector('#gender-tip')
+      let male = document.querySelector('#male')
+      let remale = document.querySelector('#remale')
+
+      if(male.checked === true || remale.checked === true) {
+        spanEl.innerHTML = "<font color='green'>性别以勾选✔</font>"
+      }else {
+        spanEl.innerHTML = "<font color='green'>请勾选您的性别</font>"
+      }
+    }
+
+    function checkMiaoshu() {
+      var c4 = document.getElementById("miaoshu").value;
+		c4 = c4.trim();
+		var cc3 = document.getElementById("miaoshu1");
+		if (c4.length > 5) {
+			cc3.innerHTML = "<font color='green'>个人描述合格✔</font >"} 
+			else {
+			cc3.innerHTML = "<font color='red'>个人描述字数小于五十字</font>"}
+ return c4.length > 5;
+    }
+  </script>
+</body>
+
+</html>

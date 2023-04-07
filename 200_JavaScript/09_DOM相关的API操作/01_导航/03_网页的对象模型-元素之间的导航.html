@@ -20,24 +20,24 @@
     </ul>
 
     <script>
-      var bodyEl = document.body
+      var bodyEl = document.body;
       // 根据 body 元素去获取子元素(element)
-      var childElements = bodyEl.children
-      console.log(childElements)
+      var childElements = bodyEl.children;
+      console.log(childElements);
 
       // 获取 box 元素
-      var boxEl1 = bodyEl.firstElementChild
-      var boxEl2 = bodyEl.children[0]
+      var boxEl1 = bodyEl.firstElementChild;
+      var boxEl2 = bodyEl.children[0];
 
-      console.log(boxEl1, boxEl2, boxEl1 === boxEl2)
+      console.log(boxEl1, boxEl2, boxEl1 === boxEl2);
 
       // 获取 ul 元素
-      var ulEl = boxEl1.nextElementSibling
-      console.log(ulEl)
+      var ulEl = boxEl1.nextElementSibling;
+      console.log(ulEl);
 
       // 获取 li 元素
-      var liEls = ulEl.children
-      console.log(liEls)
+      var liEls = ulEl.children;
+      console.log(liEls);
     </script>
   </body>
 </html>

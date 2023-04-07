@@ -34,42 +34,45 @@
       // window 大小
 
       // 获取窗口的宽度和高度(包含调试工具/工具栏)
-      console.log(window.outerWidth)
-      console.log(window.outerHeight)
+      console.log("获取窗口的宽度和高度(包含调试工具/工具栏)");
+      console.log("outerWidth:", window.outerWidth);
+      console.log("outerHeight", window.outerHeight);
 
       // 获取窗口的宽度和高度(包含滚动条)
-      console.log(window.innerWidth)
-      console.log(window.innerHeight)
+      console.log("获取窗口的宽度和高度(包含滚动条)");
+      console.log("innerWidth:", window.innerWidth);
+      console.log("innerHeight", window.innerHeight);
 
       // 获取 html 的宽度和高度(不包含滚动条)
-      console.log(document.documentElement.offsetWidth)
-      console.log(document.documentElement.offsetHeight)
+      console.log("获取 html 的宽度和高度(不包含滚动条)");
+      console.log("offsetWidth:", document.documentElement.offsetWidth);
+      console.log("offsetHeight:", document.documentElement.offsetHeight);
 
       // 获取 window 的滚动区域
-      window.onclick = function() {
-        console.log(window.scrollX)
-        console.log(window.scrollY)
-      }
+      window.onclick = function () {
+        console.log("获取 window 的滚动区域");
+        console.log("scrollX:", window.scrollX);
+        console.log("scrollY:", window.scrollY);
+      };
 
-      var scrollBtnEl = document.querySelector(".scroll-btn")
-      scrollBtnEl.hidden = true
-      window.onscroll = function() {
-        var scrollY = window.scrollY
+      var scrollBtnEl = document.querySelector(".scroll-btn");
+      scrollBtnEl.hidden = true;
+      window.onscroll = function () {
+        var scrollY = window.scrollY;
         if (scrollY > 600) {
           // scrollBtnEl.style.display = "block"
-          scrollBtnEl.hidden = false
+          scrollBtnEl.hidden = false;
         } else {
           // scrollBtnEl.style.display = "none"
-          scrollBtnEl.hidden = true
+          scrollBtnEl.hidden = true;
         }
-      }
+      };
 
       // 点击按钮后滚动到某个位置
-      scrollBtnEl.onclick = function() {
+      scrollBtnEl.onclick = function () {
         // window.scrollBy(0, 100)
-        window.scrollTo(0, 0)
-      }
-
+        window.scrollTo(0, 0);
+      };
     </script>
   </body>
 </html>

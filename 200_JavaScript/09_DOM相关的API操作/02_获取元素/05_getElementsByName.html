@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      爱好:
+      <label for="basketball">
+        <input
+          id="basketball"
+          type="checkbox"
+          name="hobby"
+          checked
+          value="basketball"
+        /> </label
+      >篮球
+      <label for="football">
+        <input
+          id="football"
+          type="checkbox"
+          name="hobby"
+          value="football"
+        /> </label
+      >足球
+    </div>
+    <input type="button" onclick="getElements()" value="多少种爱好选择?" />
+    <script>
+      function getElements() {
+        var itemEls = document.getElementsByName("hobby");
+        console.log("共" + itemEls.length + "种爱好可以选");
+        console.log(itemEls[0].type, itemEls[0].value, itemEls[0].checked);
+      }
+    </script>
+  </body>
+</html>

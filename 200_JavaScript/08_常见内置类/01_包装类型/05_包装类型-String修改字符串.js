@@ -2,7 +2,7 @@ var message = "Hello World"
 
 // 1. 严格的修改字符串, 之前的字符串内部修改掉
 message[2] = "a"
-console.log(message)
+console.log(message) // Hello World
 
 
 // String 两个方法: (重要)
@@ -10,8 +10,8 @@ console.log(message)
 // toLowerCase: 将所有的字符变成小写
 
 var message1 = message.toUpperCase()
-console.log("message:", message)
-console.log("message1:", message1)
+console.log("message:", message) // message: Hello World
+console.log("message1:", message1) // message1: HELLO WORLD
 
 var message2 = message.toLowerCase()
-console.log("message2:", message2)
+console.log("message2:", message2) // message2: hello world

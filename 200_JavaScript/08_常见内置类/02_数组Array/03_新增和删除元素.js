@@ -4,10 +4,16 @@ var names = ["aaa", "bbb", "ccc", "ddd", "eee"]
 // push方法
 names.push("fff", "ggg")
 console.log(names)
+// [
+//   'aaa', 'bbb',
+//   'ccc', 'ddd',
+//   'eee', 'fff',
+//   'ggg'
+// ]
 // pop方法
 names.pop()
 names.pop()
-console.log(names)
+console.log(names) // [ 'aaa', 'bbb', 'ccc', 'ddd', 'eee' ]
 
 
 // 2. 在数组的头部添加和删除元素

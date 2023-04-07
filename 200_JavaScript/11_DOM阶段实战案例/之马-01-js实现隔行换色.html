@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul {
+        width: 600px;
+        list-style: none;
+        margin: 0 auto;
+      }
+
+      ul li {
+        width: 100%;
+        height: 30px;
+        margin-top: 5px;
+        color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+    </ul>
+
+    <script>
+      // 使用js实现隔行更换背景颜色，奇数行 #aaa, 偶数行 #000
+      var lis = document.querySelectorAll("li");
+      console.log(lis);
+      for (var i = 0; i < lis.length; i++) {
+        if (i % 2 === 0) {
+          lis[i].style.backgroundColor = "#000";
+        } else {
+          lis[i].style.backgroundColor = "#aaa";
+        }
+      }
+    </script>
+  </body>
+</html>

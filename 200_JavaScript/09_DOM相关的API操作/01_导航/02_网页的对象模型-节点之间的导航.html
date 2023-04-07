@@ -18,34 +18,42 @@
       <li>4</li>
       <li>5</li>
     </ul>
-
-
-    <script>
-      // 获取 html 元素节点
-      var htmlEl = document.documentElement
-      // 获取 body 元素节点
-      var bodyEl = document.body
-      // 获取 head 元素节点
-      var headEl = document.head
-      // 获取 doctype 节点
-      var doctype = document.doctype
-      console.log(htmlEl, bodyEl, headEl, doctype)
-
-      console.log("=======")
-
-      // 1. 获取节点的导航
-      var bodyEl = document.body
-      // 1.1 获取 body 所有的子节点
-      console.log(bodyEl.childNodes)
-      // 1.2 获取 body 的第一个子节点
-      var bodyElFirstChild = bodyEl.firstChild
-      console.log("获取 body 的第一个子节点: ", bodyElFirstChild)
-      // 1.3 获取 body 中的注释
-      var bodyElCommentChild = bodyElFirstChild.nextSibling
-      console.log("获取 body 中的注释: ", bodyElCommentChild)
-      // 1.5 获取 body 的父节点
-      var bodyParent = bodyEl.parentNode
-      console.log("获取 body 的父节点 - html: ", bodyParent)
-    </script>
   </body>
+
+  <script>
+    // 获取 html 元素节点
+    var htmlEl = document.documentElement;
+    console.log(htmlEl);
+    console.log("%O", htmlEl);
+    // 获取 body 元素节点
+    var bodyEl = document.body;
+    console.log("body=====");
+    console.log(bodyEl);
+    // 获取 head 元素节点
+    var headEl = document.head;
+    console.log(headEl);
+    // 获取 doctype 节点
+    var doctype = document.doctype;
+    console.log(doctype);
+    console.log(htmlEl, bodyEl, headEl, doctype);
+
+    console.log("=======");
+
+    // 1. 获取节点的导航
+    var bodyEl = document.body;
+    // 1.1 获取 body 所有的子节点
+    console.log(bodyEl.childNodes);
+    // 1.2 获取 body 的第一个子节点
+    var bodyElFirstChild = bodyEl.firstChild;
+    console.log(bodyEl.firstChild);
+    console.log("获取 body 的第一个子节点: ", bodyElFirstChild);
+    // 1.3 获取 body 中的注释
+    var bodyElCommentChild = bodyElFirstChild.nextSibling;
+    console.log(bodyElCommentChild);
+    console.log("获取 body 中的注释: ", bodyElCommentChild);
+    // 1.5 获取 body 的父节点
+    var bodyParent = bodyEl.parentNode;
+    console.log(bodyParent);
+    console.log("获取 body 的父节点 - html: ", bodyParent);
+  </script>
 </html>

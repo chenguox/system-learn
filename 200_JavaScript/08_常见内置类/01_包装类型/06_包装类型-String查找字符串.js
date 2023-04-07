@@ -13,17 +13,20 @@ if (index !== -1) {
 } else {
   console.log("message中不包含name")
 }
+// message中包含name
 
 // 2. includes: ES6 中新增一个方法, 就是用来判断包含关系
 if (message.includes(name)) {
   console.log("message中包含name")
 }
+// message中包含name
 
 // 需求: 判断是否以XXX开头, 是否以XXX结尾
 // 3. startWith: 是否以XXX开头
 if (message.startsWith("my")) {
   console.log("message以my开头")
 }
+// message以my开头
 
 // 4. endWith: 是否以XXX结尾
 if (message.endsWith("cgx")) {
@@ -34,12 +37,12 @@ if (message.endsWith("cgx")) {
 // 需求: 替换掉message中的cgx为kobe
 // 5. replace 替换字符串
 var newMessage = message.replace("cgx", "kobe")
-console.log(message)
-console.log(newMessage)
+console.log(message) // my name is cgx.
+console.log(newMessage) // my name is kobe.
 
 // 可以接收一个回调函数, 做复杂的处理操作, 也就是先执行回调函数, 再对返回值进行替换
 var newName = "kobe"
 var newMessage2 = message.replace("cgx", function() {
   return (newName + "aaa").toUpperCase()
 })
-console.log(newMessage2)
+console.log(newMessage2) // my name is KOBEAAA.

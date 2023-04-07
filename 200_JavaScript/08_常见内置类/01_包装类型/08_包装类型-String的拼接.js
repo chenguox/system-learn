@@ -5,24 +5,24 @@ var str3 = "kobe"
 // 1. 字符串拼接
 // +
 var newString = str1 + str2 + str3
-console.log(newString)
+console.log(newString) // HelloWorldkobe
 
 // concat方法: 链式调用
 var newString2 = str1.concat(str2).concat(str3)
 var newString3 = str1.concat(str2, str3, "aaa", "bbb")
-console.log(newString2)
-console.log(newString3)
+console.log(newString2) // HelloWorldkobe
+console.log(newString3) // HelloWorldkobeaaabbb
 
 
 // 2. 删除首尾的空格
-console.log("    cgx    aaa    ".trim())
+console.log("    cgx    aaa    ".trim()) // 'cgx    aaa'
 
 
 // 3. 字符串切割split
 var message = "aaa-bbb-ccc-ddd"
 var items = message.split("-")
-console.log(items)
+console.log(items) // ['aaa', 'bbb', 'ccc', 'ddd']
 
 // 4. 将元素拼接成字符串
 var newMessage = items.join("*")
-console.log(newMessage)
+console.log(newMessage) // aaa*bbb*ccc*ddd

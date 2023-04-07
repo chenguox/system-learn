@@ -1,12 +1,12 @@
 var message = "Hello World"
 
 // 1. 属性: length
-console.log(message.length)
+console.log(message.length) // 11
 
 
 // 2. 访问字符串中某个位置的字符
-console.log(message[4])
-console.log(message.charAt(4))
+console.log(message[4]) // o
+console.log(message.charAt(4)) // o
 // 超出
 console.log(message[20]) // undefined
 console.log(message.charAt(20)) //  
