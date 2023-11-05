@@ -31,8 +31,10 @@ class GXEventBus {
     for (let i = 0; i < newHandlers.length; i++) {
       // 取出对象，判断地址值一致的，将该对象通过 splice 移除
       const handler = newHandlers[i]
+      console.log("外面：", i)
       if (handler.eventCallback === eventCallback) {
         const index = handlers.indexOf(handler)
+        console.log("里面：", index)
         handlers.splice(index, 1)
       }
     }
@@ -59,9 +61,16 @@ function handleCallback(value) {
 eventBus.on('aaa', handleCallback, {
   name: 'cgx'
 })
+eventBus.on('bbb', handleCallback, {
+  name: 'cgx2'
+})
+eventBus.on('aaa', handleCallback, {
+  name: 'cgx3'
+})
+console.log(eventBus)
 
 eventBus.emit('aaa', 111)
-eventBus.emit('aaa', 222)
+// eventBus.emit('aaa', 222) 
 
 // 移除监听
 eventBus.off("aaa", handleCallback)

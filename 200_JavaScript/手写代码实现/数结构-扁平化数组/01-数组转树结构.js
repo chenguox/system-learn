@@ -58,7 +58,7 @@ function getChildren(arr, id) {
   return result
 }
 
-// console.log(getChildren(arr, 0))
+// console.log(getChildren(arr, 0)[0])
 // [ { id: 1, name: '部门1', pid: 0, children: [ [Object], [Object] ] } ]
 
 function getNode(arr, id) {

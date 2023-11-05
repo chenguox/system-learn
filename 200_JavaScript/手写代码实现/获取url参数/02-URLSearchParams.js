@@ -9,7 +9,7 @@ function getUrlParams(url) {
   const iterable = urlSearchParams.entries()
   // URLSearchParams Iterator {
   //   [ 'name', 'Jack' ],
-  //   [ 'age', '25' ],
+  //   [ 'age', '25' ],迭代·
   //   [ 'sex', 'men' ],
   //   [ 'wife', 'Lucy' ] }
   // 3、使用 Object.fromEntries(iterable)

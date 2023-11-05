@@ -40,41 +40,41 @@
 
 
 // other
-// function add2(...args1) {
-//   let allArgs = [...args1]
-
-//   function fn(...args2) {
-//     if (!args2.length) return fn.toString()
-
-//     allArgs = [...allArgs, ...args2]
-//     // console.log(allArgs);
-//     return fn
-//   }
-
-//   fn.toString = function () {
-//     return allArgs.reduce((pre, next) => pre + next)
-//   }
-
-//   return fn
-// } 
-
 function add2(...args1) {
-  const allArgs = [...args1]
+  let allArgs = [...args1]
 
-  const fn = function(...args2) {
-    if(args2.length === 0) return fn.toString()
+  function fn(...args2) {
+    if (!args2.length) return fn.toString()
 
-    allArgs.push(...args2)
-
+    allArgs = [...allArgs, ...args2]
+    // console.log(allArgs);
     return fn
   }
 
-  fn.toString = function() {
-    return allArgs.reduce((pre,item) => pre + item, 0)
+  fn.toString = function () {
+    return allArgs.reduce((pre, next) => pre + next)
   }
 
   return fn
-}
+} 
+
+// function add2(...args1) {
+//   const allArgs = [...args1]
+
+//   const fn = function(...args2) {
+//     if(args2.length === 0) return fn.toString()
+
+//     allArgs.push(...args2)
+
+//     return fn
+//   }
+
+//   fn.toString = function() {
+//     return allArgs.reduce((pre,item) => pre + item, 0)
+//   }
+
+//   return fn
+// }
 
 
 console.log(add2(1)(2)(3)(4)());

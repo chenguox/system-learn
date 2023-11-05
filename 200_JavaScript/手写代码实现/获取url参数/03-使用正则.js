@@ -6,16 +6,18 @@ function getUrlParams3(url){
             该正则匹配规则表示: 首先匹配的格式是 xxx = xxx
                                然后 (\w+|[\u4e00-\u9fa5]+) 表示至少匹配一个(字母、数字、下划线) 或者至少匹配一个中文字符
         */
-	let pattern = /(\w+|[\u4e00-\u9fa5]+)=(\w+|[\u4e00-\u9fa5]+)/ig;
+	// let pattern = /(\w+|[\u4e00-\u9fa5]+)=(\w+|[\u4e00-\u9fa5]+)/ig;
         
         /*
             该正则匹配规则表示: 首先匹配的格式是 xxx = xxx
                                然后[^?|&] 表示匹配的字符中不能含有 ? 或者 &，后面同理
         */ 
-        // let pattern = /([^?|&]+)=([^&]+)/ig;
+        let pattern = /([^?|&]+)=([^&]+)/ig;
+        // console.log(pattern)
         
 	let result = {};
 	url.replace(pattern, ($, $1, $2)=>{
+                console.log($, $1, $2)
 		result[$1] = $2;
 	})
 	return result

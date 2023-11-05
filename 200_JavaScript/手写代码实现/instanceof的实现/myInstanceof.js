@@ -31,4 +31,4 @@ let p = {
 }
 // console.log(p instanceof Person);
 
-console.log(myInstanceof(Person, p));
+console.log(myInstanceof(Person, p)  );
