@@ -14,5 +14,6 @@ type ParamsArray<T> = T extends Array<infer P> ? P : T
 
 type result1 = ParamsArray<string[]>
 type result2 = ParamsArray<number[]>
+type result3 = ParamsArray<number>
 
 export {}

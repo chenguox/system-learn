@@ -15,7 +15,7 @@ fs.writeFile(
 
 
 // 2. 创建一个写入流
-const writeStream = fs.createWriteStream('./ccc.txt', {
+const writeStream = fs.createWriteStream('./ggg', {
   flags: 'a'
 })
 

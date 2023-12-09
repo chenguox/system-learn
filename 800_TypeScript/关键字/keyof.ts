@@ -17,3 +17,6 @@ type testkeys = keyof { [k: number]: any; name: string }
 type Mapish = { [k: string]: boolean; name: string }
 type M = keyof Mapish
 // type M = string | number
+
+type content = M
+

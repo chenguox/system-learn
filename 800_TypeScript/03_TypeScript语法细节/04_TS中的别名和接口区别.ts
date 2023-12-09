@@ -46,7 +46,10 @@ const ikun1: IKun = {
 
 // 4. interface 可以被类实现
 class Person implements IPerson {
-  
+  constructor(name, age) {
+    this.name = name
+    
+  }
 }
 
 export {}
