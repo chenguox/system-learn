@@ -163,28 +163,45 @@ class GXPromise {
   }
 }
 
-const promise1 = new GXPromise((resolve, reject) => {
+const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(1111)
-  }, 2000)
-})
-
-const promise2 = new GXPromise((resolve, reject) => {
-  setTimeout(() => {
-    reject(2222)
   }, 1000)
 })
 
-const promise3 = new GXPromise((resolve, reject) => {
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(2222)
+  }, 2000)
+})
+
+const promise3 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(3333)
   }, 3000)
 })
 
-GXPromise.race([promise1, promise2, promise3])
+const promise4 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(3333)
+  }, 3000)
+})
+
+
+const list = [promise1, promise2, promise3]
+
+GXPromise.race(list)
   .then((res) => {
     console.log('res:', res)
+    list.shift()
+    list.unshift(promise4)
+    Promise.race(list).catch(e => e)
   })
   .catch((err) => {
     console.log('err:', err)
   })
+
+
+setTimeout(() => {
+  console.log(list)
+}, 2000)

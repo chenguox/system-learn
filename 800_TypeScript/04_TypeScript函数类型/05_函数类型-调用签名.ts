@@ -9,7 +9,7 @@ interface IBar {
   (num1: number): number
 }
 
-const bar: IBar = (num1: number): number => {
+const bar: IBar = (num) => {
   return 123
 }
 

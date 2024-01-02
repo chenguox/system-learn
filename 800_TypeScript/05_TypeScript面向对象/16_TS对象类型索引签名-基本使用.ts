@@ -30,7 +30,7 @@ const name = info["name"]
 // console.log(info, name)
 console.log(name, info.age, info.address)
 
-
+console.log('=====')
 // 2. 索引签名的案例
 interface ICollection {
   [index: number]: string
@@ -47,6 +47,7 @@ function printCollection(collection: ICollection) {
 const array = ['aaa', 'bbb', 'ccc']
 const tuple: [string, string] = ['ddd', 'eee']
 printCollection(array)
+console.log('=====')
 printCollection(tuple)
 
 
